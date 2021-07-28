@@ -30,6 +30,10 @@ public class UserService implements UserDetailsService{
 	
   System.out.println("Hello-world");
 
+       public Optional<User> byId(Integer id){
+		return Optional.ofNullable(ur.findById(id));
+	}
+
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		Optional<User> user = byEmail(email);
