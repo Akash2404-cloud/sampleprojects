@@ -27,6 +27,10 @@ public class UserService implements UserDetailsService{
 	public Optional<User> byEmail(String email ){
 		return Optional.ofNullable(ur.findByEmail(email));
 	}
+
+       public Optional<User> byId(Integer id ){
+		return Optional.ofNullable(ur.findById(id));
+	}
 	
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
