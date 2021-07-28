@@ -28,6 +28,8 @@ public class UserService implements UserDetailsService{
 		return Optional.ofNullable(ur.findByEmail(email));
 	}
 	
+  System.out.println("Hello-world");
+
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		Optional<User> user = byEmail(email);
