@@ -19,6 +19,7 @@ public class UserService implements UserDetailsService{
 	private UserRepository ur;
 	
 	public String adduser(User user) {
+//            comments were added
 		ur.save(user);
 		return "User added successfully";
 	}
